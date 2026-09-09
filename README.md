@@ -31,6 +31,18 @@
 
 </div>
 
+## Table of contents
+
+- [Installation](#installation)
+- [How it works](#-how-it-works)
+- [Quick start](#-quick-start)
+- [MCP & agents](#coding-agents-and-mcp-integration)
+- [Core](#-tokenfold-core)
+- [Benchmarks](#-measured-results)
+- [Extended tooling](#-extended-tooling)
+
+<br />
+
 ## Installation
 
 ```bash
@@ -68,18 +80,6 @@ cargo add tokenfold-core     # Rust library
 
 > [!NOTE]
 > **Built for:** Developers and AI teams cutting latency and API costs on structured JSON, tool definitions, and RAG feeds without risking hallucinations or prompt drift. Ideal for applications sending large JSON tool payloads, tool-calling agent loops (Claude Code, Codex), and structured RAG feeds where token overhead drives latency and cost.
-
-<br />
-
-## Table of contents
-
-- [Installation](#installation)
-- [How it works](#-how-it-works)
-- [Quick start](#-quick-start)
-- [MCP & agents](#coding-agents-and-mcp-integration)
-- [Core](#-tokenfold-core)
-- [Benchmarks](#-measured-results)
-- [Extended tooling](#-extended-tooling)
 
 <br />
 
@@ -310,6 +310,7 @@ Exact `o200k_base` token counts, original input versus Tokenfold's lossless
 output across the six-fixture Headroom corpus:
 
 ```mermaid
+%%{init: {"themeVariables": {"xyChart": {"plotColorPalette": "#A855F7, #22D3EE"}}}}%%
 xychart-beta
     title "Exact tokens: original vs. Tokenfold (lossless)"
     x-axis ["Flat", "API resp", "Incident", "OpenAI", "Report", "Schema"]

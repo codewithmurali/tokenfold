@@ -95,6 +95,13 @@ cargo add tokenfold-core     # Rust library
 {"__tf_cols__":["id","role"],"__tf_rows__":[[1,"admin"],[2,"member"]]}
 ```
 
+```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#22D3EE", "primaryTextColor": "#0b1020", "primaryBorderColor": "#A855F7", "lineColor": "#A855F7", "fontFamily": "ui-sans-serif, system-ui, sans-serif"}}}%%
+flowchart LR
+    In["Repeated keys in every record<br/>id, role, id, role"] --> TF[Tokenfold Core]
+    TF --> Out["Keys named once as columns<br/>values packed into rows"]
+```
+
 Send the folded JSON directly to the model: column names label each value's
 position in every row. Decode only when your application needs the original
 object shape again.
@@ -119,6 +126,7 @@ no hallucination risk is introduced, and every lossless transform is verified
 by exact decode.
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#22D3EE", "primaryTextColor": "#0b1020", "primaryBorderColor": "#A855F7", "lineColor": "#A855F7", "fontFamily": "ui-sans-serif, system-ui, sans-serif"}}}%%
 flowchart LR
     App[Application / Agent] -->|Large JSON / tool schemas| TF[Tokenfold Core]
     TF -->|Lossless structural JSON| LLM[LLM provider]
@@ -129,6 +137,7 @@ flowchart LR
 #### How Tokenfold decides what to fold
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#22D3EE", "primaryTextColor": "#0b1020", "primaryBorderColor": "#A855F7", "lineColor": "#A855F7", "fontFamily": "ui-sans-serif, system-ui, sans-serif"}}}%%
 flowchart TD
     Start([Incoming JSON payload]) --> Detect{Shape?}
     Detect -->|Tabular array| Fold[Fold repeated keys into columns]
@@ -147,6 +156,7 @@ flowchart TD
 #### Proxy / agent round trip
 
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {"primaryColor": "#22D3EE", "primaryTextColor": "#0b1020", "primaryBorderColor": "#A855F7", "lineColor": "#A855F7", "actorBkg": "#22D3EE", "actorTextColor": "#0b1020", "actorBorder": "#A855F7", "signalColor": "#A855F7", "signalTextColor": "#334155", "fontFamily": "ui-sans-serif, system-ui, sans-serif"}}}%%
 sequenceDiagram
     participant C as Client / Agent
     participant P as Tokenfold Proxy

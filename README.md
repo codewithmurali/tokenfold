@@ -313,17 +313,11 @@ through [Tokenfold Select](#tokenfold-select).
 Exact `o200k_base` token counts, original input versus Tokenfold's lossless
 output across the six-fixture Headroom corpus:
 
-```mermaid
-%%{init: {"theme": "base", "themeVariables": {"fontFamily": "ui-sans-serif, system-ui, sans-serif", "xyChart": {"backgroundColor": "transparent", "titleColor": "#A855F7", "xAxisLabelColor": "#64748b", "xAxisTitleColor": "#64748b", "xAxisTickColor": "#64748b", "xAxisLineColor": "#94a3b8", "yAxisLabelColor": "#64748b", "yAxisTitleColor": "#64748b", "yAxisTickColor": "#64748b", "yAxisLineColor": "#94a3b8", "plotColorPalette": "#A855F7, #22D3EE"}}}}%%
-xychart-beta
-    title "Exact tokens: original vs. Tokenfold (lossless)"
-    x-axis ["Flat", "API resp", "Incident", "OpenAI", "Report", "Schema"]
-    y-axis "Tokens" 0 --> 8000
-    bar [826, 3812, 7216, 346, 195, 676]
-    bar [366, 1376, 6144, 229, 128, 472]
-```
+<div align="center">
+  <img src="docs/assets/Chart.png" alt="Exact tokens: original input vs. Tokenfold lossless output across the six-fixture Headroom corpus" width="80%" />
+</div>
 
-<div align="center"><sub>First bar per pair: original input · Second bar: Tokenfold lossless output</sub></div>
+<div align="center"><sub>Original input vs. Tokenfold lossless output, exact o200k_base token counts</sub></div>
 
 ### Competitive comparison
 

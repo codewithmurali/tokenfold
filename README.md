@@ -314,7 +314,7 @@ Exact `o200k_base` token counts, original input versus Tokenfold's lossless
 output across the six-fixture Headroom corpus:
 
 ```mermaid
-%%{init: {"themeVariables": {"xyChart": {"plotColorPalette": "#A855F7, #22D3EE"}}}}%%
+%%{init: {"theme": "base", "themeVariables": {"fontFamily": "ui-sans-serif, system-ui, sans-serif", "xyChart": {"backgroundColor": "transparent", "titleColor": "#A855F7", "xAxisLabelColor": "#64748b", "xAxisTitleColor": "#64748b", "xAxisTickColor": "#64748b", "xAxisLineColor": "#94a3b8", "yAxisLabelColor": "#64748b", "yAxisTitleColor": "#64748b", "yAxisTickColor": "#64748b", "yAxisLineColor": "#94a3b8", "plotColorPalette": "#A855F7, #22D3EE"}}}}%%
 xychart-beta
     title "Exact tokens: original vs. Tokenfold (lossless)"
     x-axis ["Flat", "API resp", "Incident", "OpenAI", "Report", "Schema"]

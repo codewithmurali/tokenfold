@@ -126,8 +126,7 @@ flowchart LR
     TF -.->|Optional exact decode of folded payload| App
 ```
 
-<details open>
-<summary><strong>How Tokenfold decides what to fold</strong></summary>
+#### How Tokenfold decides what to fold
 
 ```mermaid
 flowchart TD
@@ -145,10 +144,7 @@ flowchart TD
     Guard -->|No| Passthrough([Keep compact JSON, never larger])
 ```
 
-</details>
-
-<details>
-<summary><strong>Proxy / agent round trip</strong></summary>
+#### Proxy / agent round trip
 
 ```mermaid
 sequenceDiagram
@@ -161,8 +157,6 @@ sequenceDiagram
     U-->>P: Completion / action
     P-->>C: Response (Authorization forwarded unchanged)
 ```
-
-</details>
 
 ![Terminal demo: Tokenfold reduces the bundled API response from 3,812 to 1,376 tokens.](docs/assets/tokenfold-demo.gif)
 

@@ -10,7 +10,7 @@
 <h3>More context. Fewer tokens. Exact by default.</h3>
 
 <p>
-  <strong>Cut input tokens up to 96% with opt-in, recoverable pruning — or 45-68% with byte-exact lossless compression.</strong>
+  <strong>Cut input tokens up to 96% with opt-in, recoverable pruning - or 45-68% with byte-exact lossless compression.</strong>
 </p>
 
 <p><em>Model-free core. Zero added hallucination risk. Provider-neutral.</em></p>
@@ -34,12 +34,12 @@
 ## Table of contents
 
 - [Installation](#installation)
-- [How it works](#-how-it-works)
-- [Quick start](#-quick-start)
+- [How it works](#how-it-works)
+- [Quick start](#quick-start)
 - [MCP & agents](#coding-agents-and-mcp-integration)
-- [Core](#-tokenfold-core)
-- [Benchmarks](#-measured-results)
-- [Extended tooling](#-extended-tooling)
+- [Core](#tokenfold-core)
+- [Benchmarks](#measured-results)
+- [Extended tooling](#extended-tooling)
 
 <br />
 
@@ -58,14 +58,14 @@ cargo add tokenfold-core     # Rust library
       <br />
       <strong>Up to 96% fewer tokens</strong>
       <br /><br />
-      Opt-in, recoverable pruning for heterogeneous array feeds — every dropped row stays fetchable.
+      Opt-in, recoverable pruning for heterogeneous array feeds - every dropped row stays fetchable.
       <br /><br />
     </td>
     <td align="center" width="33%">
       <br />
       <strong>45-68% lossless</strong>
       <br /><br />
-      Byte-exact structural folding of repeated keys, columns, and schemas — verified by exact decode.
+      Byte-exact structural folding of repeated keys, columns, and schemas - verified by exact decode.
       <br /><br />
     </td>
     <td align="center" width="33%">
@@ -83,7 +83,7 @@ cargo add tokenfold-core     # Rust library
 
 <br />
 
-## 🔍 How it works
+## How it works
 
 ### What the model sees
 
@@ -192,7 +192,7 @@ inputs and provenance live in [`tests/fixtures/readme_metrics.json`](tests/fixtu
 
 <br />
 
-## 🚀 Quick start
+## Quick start
 
 ### Drop-in proxy for OpenAI-compatible clients
 
@@ -291,7 +291,7 @@ are available through `tokenfold filters list`.
 
 <br />
 
-## 🧩 Tokenfold Core
+## Tokenfold Core
 
 ### Structural, not semantic compression
 
@@ -308,7 +308,7 @@ through [Tokenfold Select](#tokenfold-select).
 
 <br />
 
-## 📊 Measured results
+## Measured results
 
 Exact `o200k_base` token counts, original input versus Tokenfold's lossless
 output across the six-fixture Headroom corpus:
@@ -409,7 +409,7 @@ and [reproduction command](eval/research/README.md).
 
 <br />
 
-## 🛠️ Extended tooling
+## Extended tooling
 
 These optional companions are separate from Tokenfold Core. Recoverable pruning can trade
 payload completeness for local retrieval, and Select uses an external model; neither is
@@ -626,7 +626,7 @@ already-compressed JSON representation.
 
 <br />
 
-## 🛡️ Safety and auditability
+## Safety and auditability
 
 - **Never larger:** Core keeps a transform only when exact recounting shows a
   reduction; a lossy branch must also beat the lossless result.
@@ -648,7 +648,7 @@ their own representative task evaluation before enabling lossy pruning.
 
 <br />
 
-## 🔬 Reproduce the results
+## Reproduce the results
 
 ```bash
 # 96.3% maximum-compression showcase, mixed-feed curve, retrieval, and preserve
@@ -671,7 +671,7 @@ and [`crates/tokenfold-core/benches/THRESHOLDS.toml`](https://github.com/snchima
 
 <br />
 
-## 🤝 Contributing
+## Contributing
 
 Issues and pull requests are welcome. Run the relevant checks before opening a
 PR:
@@ -686,7 +686,7 @@ cd packages/tokenfold && npm ci && npm test
 
 <br />
 
-## 📄 License
+## License
 
 [Apache-2.0](https://github.com/snchimata/tokenfold/blob/main/LICENSE)
 
